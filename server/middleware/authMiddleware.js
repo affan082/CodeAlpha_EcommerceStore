@@ -1,6 +1,8 @@
 const jwt = require('jsonwebtoken');
 const User = require('../models/User');
 
+
+
 const protect = async(req, res, next) =>{
 
     let token = req.headers.authorization?.startsWith('Bearer')
@@ -18,9 +20,13 @@ const protect = async(req, res, next) =>{
     }
 };
 
+
+
 const admin = (req, res, next) => {
     if (req.user?.role === 'admin') return next();
     res.status(403).json({message: 'Not authorized as an admin'});       
 };
+
+
 
 module.exports= {protect, admin};

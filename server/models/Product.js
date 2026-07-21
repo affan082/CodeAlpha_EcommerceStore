@@ -1,14 +1,18 @@
 const mongoose = require('mongoose');
 
+
+
 const productSchema = mongoose.Schema({
     name:{type: String, required: true},
     description:{type: String, required: true, maxlength: 350},
     price:{type: Number, required: true},
-    category:{ type: String,required: true},
+    category:{ type: String,required: true, enum: ['Pants', 'T-Shirts', 'Casual Shirts'],},
     stock:{type: Number, required: true, default: 0},
     images:[{type: String}],
     createdBy:{ type: mongoose.Schema.Types.ObjectId, ref: 'User'},
 }, {timestamps: true});
+
+
 
 module.exports = mongoose.model('Product', productSchema);
 
