@@ -18,26 +18,6 @@ A full-stack e-commerce web application for men's casual clothing, featuring Pan
 
 **Backend:** Node.js, Express.js, MongoDB, Mongoose, JWT, bcrypt, Multer
 
-## Folder Structure
-
-FineFit/
-├── client/ # React frontend
-│ └── src/
-│ ├── api/
-│ ├── components/
-│ ├── context/
-│ ├── pages/
-│ ├── routes/
-│ ├── styles/
-│ └── types/
-└── server/ # Express backend
-├── config/
-├── controllers/
-├── middleware/
-├── models/
-├── routes/
-├── utils/
-└── uploads/
 
 ## Setup Instructions
 
