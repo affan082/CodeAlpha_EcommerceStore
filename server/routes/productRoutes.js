@@ -8,8 +8,8 @@ const upload = require('../middleware/uploadMiddleware')
 
 router.get('/', getProducts);
 router.get('/:id', getProductById);
-router.post('/', protect, admin, upload.array('images', 5), createProduct);
-router.put('/:id', protect, admin, upload.array('images', 5), updateProduct);
+router.post('/', protect, admin, upload.array('images', 4), createProduct);
+router.put('/:id', protect, admin, upload.array('images', 4), updateProduct);
 router.delete('/:id', protect, admin, deleteProduct);
 
 

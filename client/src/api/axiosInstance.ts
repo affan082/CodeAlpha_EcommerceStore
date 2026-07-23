@@ -13,7 +13,7 @@ axiosInstance.interceptors.request.use((config) => {
     if(stored){
         const user = JSON.parse(stored);
         if(user?.token){
-            config.headers.Authorization = 'Bearer ${user.token}';
+            config.headers.Authorization = `Bearer ${user.token}`;
         }
     }
     return config;

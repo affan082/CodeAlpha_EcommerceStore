@@ -24,7 +24,7 @@ const CategorySection = ({ category }: { category: ProductCategory }) => {
           View More →
         </Link>
       </div>
-      <Row xs={2} md={4} className="g-4">
+      <Row xs={2} md={4} className="g-5">
         {products.map((p) => (
           <Col key={p._id}>
             <ProductCard product={p} />

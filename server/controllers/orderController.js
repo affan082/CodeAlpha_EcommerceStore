@@ -31,7 +31,7 @@ exports.createOrder = async(req, res) => {
         });
 
         //decrement stock
-        for (const i of cart.item){
+        for (const i of cart.items){
             await Product.findByIdAndUpdate(i.product._id, {$inc: {stock : -i.quantity} });
         }
 

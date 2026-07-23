@@ -12,7 +12,7 @@ const ProductCard = ({ product }: { product: Product }) => {
       <div
         className="mb-2"
         style={{
-          aspectRatio: "4/5",
+          aspectRatio: "2/2.3",
           overflow: "hidden",
           backgroundColor: "#F0EFEA",
         }}

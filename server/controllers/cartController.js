@@ -13,7 +13,7 @@ exports.getCart = async(req, res) => {
 
 // POST /api/cart  { productId, qty }    
 exports.addToCart = async(req, res) => {
-    const {product, quantity = 1} = req.body;
+    const {productId, quantity = 1} = req.body;
     let cart = await Cart.findOne({ user: req.user._id});
     if(!cart) cart = await Cart.create({user: req.user._id, items: []});
     
@@ -53,7 +53,7 @@ exports.updateCartItem = async(req, res) => {
 
 // DELETE /api/cart/:productId
 exports.removeFromCart = async(req, res) => {
-    const cart = await Cart.findOnd({ user : req.user._id});
+    const cart = await Cart.findOne({ user : req.user._id});
     if(!cart) return res.status(404).json({ message : 'Cart not found'});
 
     cart.items = cart.items.filter(i => i.product.toString() !== req.params.productId);

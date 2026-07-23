@@ -3,7 +3,7 @@ import {
   useContext,
   useState,
   useEffect,
-  ReactNode,
+  type ReactNode,
 } from "react";
 import axiosInstance from "../api/axiosInstance";
 import type { Cart } from "../types/cart";
